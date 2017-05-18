@@ -1,7 +1,9 @@
-import { injectGlobal } from 'styled-components';
+import {
+  injectGlobal
+} from 'styled-components';
 
 /* eslint-disable */
-injectGlobal`
+injectGlobal `
   @import url('https://fonts.googleapis.com/css?family=VT323');
 
   body {
