@@ -16,7 +16,7 @@ class Nav extends Component {
       {
         "id" : 2,
         "text": "Design",
-        "url": "/#/design"
+        "url": "${process.env.PUBLIC_URL}/design"
       },
       {
         "id" : 3,
