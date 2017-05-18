@@ -18,10 +18,10 @@ export default (
     <Route path="/" component={App}>
       <IndexRoute path="" component={Home}/>
     </Route>
-    <Route path="/about" component={About}></Route>
-    <Route path="/design" component={Design}></Route>
-    <Route path="/design/01" component={FindMe}></Route>
-    <Route path="/design/02" component={Udacity}></Route>
+    <Route path="${process.env.PUBLIC_URL}/about" component={About}></Route>
+    <Route path="${process.env.PUBLIC_URL}/design" component={Design}></Route>
+    <Route path="${process.env.PUBLIC_URL}/design/01" component={FindMe}></Route>
+    <Route path="${process.env.PUBLIC_URL}/design/02" component={Udacity}></Route>
     <Route path="/design/03" component={TShirt}></Route>
     <Route path="/art" component={Art}></Route>
     <Route path="/art/01" component={Art1}></Route>
