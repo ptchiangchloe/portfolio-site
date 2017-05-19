@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Item, Text,Link
+import { Item, Text,StyleLink
 } from './nav.style';
+import { Link } from 'react-router';
 
 class Nav extends Component {
 
@@ -11,27 +12,27 @@ class Nav extends Component {
       {
         "id" : 1,
         "text": "About",
-        "url": "${process.env.PUBLIC_URL}/#/about"
+        "url": "/about"
       },
       {
         "id" : 2,
         "text": "Design",
-        "url": "${process.env.PUBLIC_URL}/design"
+        "url": "/design"
       },
       {
         "id" : 3,
         "text": "Art",
-        "url": "/#/art"
+        "url": "/art"
       },
       {
         "id" : 4,
         "text": "Code",
-        "url": "/#/code"
+        "url": "/code"
       },
       {
         "id" : 5,
         "text": "Connect",
-        "url": "/#/connect"
+        "url": "/connect"
       }
     ]
   }
@@ -71,22 +72,28 @@ class NavBarItem extends Component {
 
 
   render() {
-    return <NavBarLink
+    return (<NavBarLink
                 url={this.props.url}
                 text={this.props.text}
                 key={this.props.id}
                 id={this.props.id}
                 primary={this.props.primary}
-            />;
+            />);
   }
 }
 
 class NavBarLink extends Component {
 
   render() {
-    return <Item>
-              <Link href={this.props.url} key={this.props.id}><Text primary={this.props.primary}>{this.props.text}</Text></Link>
-           </Item>;
+    return (<Item>
+              <Link to={this.props.url}>
+                <StyleLink key={this.props.id}>
+                  <Text primary={this.props.primary}>
+                    {this.props.text}
+                  </Text>
+                </StyleLink>
+              </Link>
+           </Item>);
   }
 }
 

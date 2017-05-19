@@ -7,6 +7,7 @@ import Nav from 'components/nav/nav';
 import {Box} from 'shared/Box';
 import Footer from 'components/footer/footer';
 import DocumentTitle from 'react-document-title';
+import { Link } from 'react-router';
 
 export default class Art extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class Art extends Component {
         <div>
           <Header />
           <Box>
-            <Sketch><HoverScreen className="title"><a href="/#/art/01">Pencil Sketch</a></HoverScreen></Sketch>
+            <Sketch><HoverScreen className="title"><Link to={"/art/01"}>Pencil Sketch</Link></HoverScreen></Sketch>
           </Box>
           <Footer />
         </div>
